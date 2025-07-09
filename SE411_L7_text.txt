@@ -1,0 +1,389 @@
+University of Tripoli - Faculty of Information Technology
+Software Engineering Department
+
+Software Architecture &
+Design
+
+y Marwa Solla
+
+ITSE411
+
+Software architecture and
+design
+for modern large-scale systems
+
+Lecture 7:
+Object-oriented design using the UML
+
+What We Learn In This Lecture
+• Class Diagram
+• Object Diagram
+• State Machine Diagrams
+• Activity Diagram.
+
+UML Class Diagram
+§ A class diagram is a static structure diagram in the Unified Modeling Language
+(UML) that represents the structure and behavior of a system or application
+through its classes, attributes, methods, and relationships.
+§ In class diagram, classes are depicted as boxes, and the static relationships
+between them are depicted as lines connecting the boxes.
+§ The class diagram describes the classes of applications being modeled along with
+their relationship.
+
+Fundamental concepts of Class diagram
+v Class
+•
+
+Represents objects or Entities that share similar attributes, operations, relationships, and
+behaviors.
+
+•
+
+can identify a class by a box of three compartment.
+
+•
+
+Each class typically has a name and Define Attributes (variables) and Behaviors
+(methods).
+
+Name
+Attributes
+Methods
+
+Fundamental concepts of Class diagram
+Attributes:
+Properties or characteristics of class. They describe
+the state of an object and are typically shown as
+variables within the class.
+Methods:
+Actions that a class can perform.
+
+From Diagram to Code.
+Class diagram represents the blueprint of the code.
+
+Fundamental concepts of Class diagram
+v Visibilities
+•
+
+Define, which classes in the diagram have access to certain variables and methods.
+
+•
+
+This concept is used in object-oriented programming.
+
+•
+
+There are four visibilities types:
+
+Fundamental concepts of Class diagram
+v Visibilities
+
+TIP: On detailed design models, you should always indicate the visibility of attributes and operations
+
+Fundamental concepts of Class diagram
+
+I
+
+Fundamental concepts of Class diagram
+v Relations
+•
+
+Represents objects or Entities that share similar attributes, operations, relationships,
+
+•
+
+There are 4 types of relations:
+
+1) Associations
+2) Aggregation
+3) Composition
+4) Inheritance
+
+Relationships between Classes
+
+q Associations:
+How objects of one class interact with objects of another class
+
+Multiplicity
+v Multiplicity
+§
+
+For each class involved in a relationship, there will always be a multiplicity.
+
+Multiplicity
+v Multiplicity
+§ Many to Many(N:N)
+Student
+-attributes:int
+
+Course
+*
+
+*
+
++Method():void
+
+-attributes:int
++Method():void
+
+§ Many to One(N:1)
+CreditCard
+-attributes:int
++Method():void
+
+Person
+1..*
+
+1
+
+-attributes:int
++Method():void
+
+Multiplicity
+v Multiplicity
+§ One to Many(1:N)
+Department
+-attributes:int
+
+1
+
+1..*
+
++Method():void
+
+Employee
+-attributes:int
++Method():void
+
+§ One to One(1:1)
+HumanBody
+-attributes:int
++Method():void
+
+Nose
+1
+
+1
+
+-attributes:int
++Method():void
+
+Relationships between Classes
+q Aggregation:
+Represents a strong whole-part relationship between two classes.
+Partclass can exist Independently of the Whole class.
+WholeClass
+-Part:Partclass
++Method():void
+
+Wallet
+
+Money
+
+-attributes
+
+-attributes
+
++Method():void
+
++Method():void
+
+Relationships between Classes
+
+q Composition:
+Represents a strong whole-part relationship between two classes.
+Part cannot exist Independently of the Whole
+
+Folder
+
+File
+
+-attributes
+
+-attributes
+
++Method():void
+
++Method():void
+
+Inheritance Relationship
+q Inheritance:
+§ Inheritance is also called generalization.
+§ Hierarchical relationship between classes, where a subclass inherits attributes and
+methods from its parent class
+§ Inheritance is represented by a solid line and the inheritance arrowhead.
+
+Inheritance Relationship
+§ Inherit from the same superclass: Multiple classes can inherit from the same superclass.
+Examples:
+
+Animal
+-Name:string
++MakeSound():boolean
+
+Dog
+
+Cat
+
+-Species:string
+
+-FurType:string
+
++Bark():boolean
+
++Meow():void
+
+Inheritance Relationship
+§ Multiple inheritance: In UML one subclass can inherit from multiple superclasses.
+HOWEVER, this is not possible in all programming languages.
+
+Example 1:
+
+Example 2:
+
+UML object Diagram
+
+§ Object diagram are closely related to class diagrams
+§ Snapshot of a class diagram at a particular moment in time. by representing an
+instance of that class diagram.
+§ Object diagram is also known as instance diagram.
+
+§ Explore “real-world” examples of objects and the relation- ships
+between them.
+
+UML object Diagram
+
+UML object Diagram
+
+UML object Diagram
+Example 1:
+
+UML object Diagram
+Example 1:
+
+UML object Diagram
+Example 2:
+
+UML object Diagram
+object Diagram
+
+Class Diagram
+
+UML State Machine Diagrams
+
+§ State machine diagrams depict the dynamic behavior of an entity based on its
+response to events, showing how the entity reacts to various events based on its
+current state.
+§ Create a UML state machine diagram to explore the complex behavior of a class,
+actor, subsystem, or component.
+§ State Machine Diagrams, also known as state diagrams or statecharts.
+§ They are particularly useful for modeling the dynamic behavior of objects or systems
+that have a finite number of states.
+
+UML State Machine Diagrams
+
+§ State machine diagrams can also show how an entity reacts to various events,
+moving from one state to another.
+§ Each class has objects that may have status conditions or "states”.
+§ Object behavior consists of the various states and the movement between
+these states.
+
+§ State Machine Diagram is a diagram which shows the life of an object
+
+in states and transitions
+
+UML State Machine Diagrams
+§ key components and concepts of UML State Machine Diagrams:
+o State: a condition during an object's life when it satisfies some criterion,
+performs an action, or waits for an event.
+o Transitions: ﻿the movement of an object from one state to another
+o Origin state: the original state of an object before it begins a transition
+o Destination state: the state to which an object moves after completing a
+transition
+o Actions: some activity that must be completed as part of a transition.
+o guard-condition: a true/false test to see whether a transition can fire
+o Initial and Final States
+o Pseudostate: the starting point in a state machine diagram. Noted by a
+black circle.
+
+UML State Machine Diagrams
+§ key components and concepts of UML State Machine Diagrams:
+o Concurrent states: when an object is in one or more states at the same
+time
+o Concurrent paths: when multiple paths are being followed concurrently, i.e.
+when one or more states in one path are parallel to states in another path
+
+Notes:
+§ The event causes the state transition
+§ The optional action is performed as a result of the transition.
+Optionally, a state may have any of the following:
+ü An entry action, performed when the state is entered
+ü An exit action, performed on exit from the state
+
+UML State Machine Diagrams
+Example:
+
+UML State Machine Diagrams
+Example:
+
+On back order
+
+Open
+
+itemArrived
+
+saleComplete
+
+Ready to ship
+
+shipitem
+
+shipping
+
+UML State Machine Diagrams
+Example:
+
+UML State Machine Diagrams
+Example:
+
+UML Activity Diagram
+§ activity diagram is used to describe A use case model. However, to depict a use case, a
+subset of the activity diagram capabilities is sufficient. In particular, it is not necessary to
+model concurrent activities for use cases.
+§ An activity diagram can be used to represent the sequential steps of a use case, including
+the main sequence and all the alternative sequences.
+§ Activity diagrams is something like the famous flow charts but it's much more powerful
+than flow charts. Flow charts are not part of UML diagrams.
+
+UML Activity Diagram
+q key components and concepts of UML activity diagrams:
+§ Initial and Final Nodes: Initial nodes represent the start of the activity diagram, while final
+nodes represent the end.
+§ Activities: Activities represent tasks or actions that occur within the system.
+§ Decisions: Decisions, also known as decision nodes or decision points, represent points in
+the process where the flow of control can diverge based on conditions.
+§ Merge Nodes: Merge nodes are used to synchronize multiple incoming transitions into a
+single outgoing transition.
+§ Forks and Joins: Forks and joins are used to create parallel paths in the process flow. A
+fork splits the flow of control into multiple concurrent paths, while a join merges multiple
+concurrent paths back into a single path.
+
+UML Activity Diagram
+
+An example of an activity diagram for write
+prescription use case of the Clinic system
+
+UML Activity Diagram
+
+An example of an activity diagram for the Make Order
+Request use case of the Online Shopping System
+
+UML Activity Diagram
+Swimlane:
+Swimlanes group related activates into one column.
+
+Order processing
+
+The End
+
+
